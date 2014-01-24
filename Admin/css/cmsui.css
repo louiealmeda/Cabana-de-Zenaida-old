@@ -1,0 +1,127 @@
+#pagePreview {
+    width:100%;
+    height:auto;
+    display:block;
+    overflow-y:scroll;
+}
+
+body, html {
+    margin:0px;
+    padding:0px;
+    position:relative;
+    height:100%;
+    width:100%;
+}
+
+.icon{
+    font-family:Icons;
+}
+
+#editPanel {
+    position:absolute;
+    bottom:0px;
+    height:250px;
+    width:100%;
+    display:block;
+    
+}
+
+
+#editPanel *{
+/*    outline: 1px solid red;*/
+    -webkit-user-select:none;
+}
+
+#editPanel #header {
+    
+    font-size:0.8em;
+    color:white;
+    font-family:"Open sans";
+    margin:0px;
+    padding:0px 10px;
+    display:block;
+    height:25px;
+    background: -webkit-linear-gradient(#414141, #303030);
+    border-top: 1px solid gray;
+    border-bottom: 1px solid #6c6c6c;
+}
+
+#editPanel #header ul{
+    height:100%;   
+    display:inline-block;
+    margin:0px;
+    padding:0px;
+}
+
+#editPanel #header ul li {
+    float:left;
+    line-height:25px;
+    padding:0px 10px;
+    margin:0px;
+    
+    height:100%;
+    list-style:none;
+    cursor:pointer;
+    cursor:hand;
+
+}
+#editPanel #header ul li:hover {
+    background-color:#2a2a2a;
+}
+
+#editPanel #header li#selected{
+    background-color:#1c1c1c;
+    border-left: 1px solid #4d4d4d;
+    border-right: 1px solid #4d4d4d;
+/*    border-top:1px solid #6c6c6c;*/
+    border-bottom:1px solid #191919;
+/*    background: -webkit-linear-gradient(#414141, #3e3e3e);*/
+}
+
+
+#editPanel #content {
+    height: 225px;
+    width: 100%;
+    background-color:#1c1c1c;
+}
+
+#editPanel #header .divider {
+    border-left:1px solid gray;
+    border-right:1px solid black;
+    display:inline-block;
+    width:0px;
+    height:100%;
+/*    background-color:black;*/
+}
+
+#editPanel #content #components {
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    padding:20px;
+}
+
+#editPanel #content #components li {
+    width:100px;
+    height:100px;
+    display:inline-block;
+    background-color:gray;
+    box-shadow:0px 0px 8px black;
+    border-radius:10px;
+    line-height:70px;
+    text-align:center;
+    font-size:60px;
+    color:#191919;
+    cursor:pointer;
+    cursor:move;
+}
+
+#editPanel #content #components li#missing {
+    width:92px;
+    height:92px;
+    display:inline-block;
+    border-radius:10px;
+    border:4px dashed #2c2b2b;
+    background-color:#202020;
+    box-shadow:none;
+}
