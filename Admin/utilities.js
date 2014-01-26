@@ -1,3 +1,19 @@
+$(document).ready(function(){
+//    sessionCheck();
+});
+
+
+function sessionCheck(isLogin)
+{
+    
+    var url = "utilities.php";
+    $.post( url, {method:"SessionCheck", isLogin:isLogin}, function(data){
+        if(data.length > 0)
+            $("html").html(data);
+    });
+}
+
+
 function getScrollBarWidth () {
   var inner = document.createElement('p');
   inner.style.width = "100%";

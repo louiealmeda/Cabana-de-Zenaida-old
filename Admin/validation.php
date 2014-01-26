@@ -15,14 +15,26 @@
     $db->connect();
 
     $query = "SELECT password FROM admin where username = '$username' ";
-
     $ret = mysql_query($query);
+
+
+    if( mysql_num_rows($ret) == 0)
+    {
+        echo "Username does not exist";
+        die();
+    }
+
     if($ret)
     {
         while($row = mysql_fetch_assoc($ret))
         {
             if($row['password'] == $password)
-                echo "welcome";
+            {
+                session_start();
+                $_SESSION['username'] = $_POST['txtUsername'];
+//                echo file_get_contents('cms.html');
+                header("Location:index.html");
+            }
             else
                 echo "wrong password";
         }

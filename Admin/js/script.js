@@ -1,5 +1,15 @@
 $(document).ready(function(){
+    
+    sessionCheck(true);
+    
     $("#loginForm #notifications").fadeOut();
+    
+    
+    $("input").keypress(function(e){
+        if(e.which == 13)
+            validate();
+    });
+    
 });
 
 
@@ -20,10 +30,8 @@ function validate()
     var url = "validation.php";
     $.post( url, {txtUsername: txtUsername, txtPassword: txtPassword, cbKeep:cbKeep}, function(data){
         
-        if(data.length < 100)
+        if(data.length < 200)
             showError(data);
-        else
-            $("body").html(data);     
     });
 }
 

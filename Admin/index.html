@@ -1,53 +1,32 @@
-<!DOCTYPE>
-<HTML>
+<!DOCTYPE html>
+<html>
 
-    <HEAD>
-    
-        <title>Cabana de Zenaida | Login</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/fontfaces.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <script type="text/javascript" language = "javascript" src="js/jquery-2.0.3.min.js"></script>    
-        <script type="text/javascript" language = "javascript" src="js/script.js"></script>    
-        
-    </HEAD>
-    
-    <body>
-    
-        <form id = "login" name = "login" action="validation.php" method="post">
-            <div id = "loginForm" class="theme">
-                <span>Admin Login</span>
-                
-                <img src="images/bottom_shadow.png">
-                
-                <div class = "field">
-                    <div>Username:</div>
-                    <div><input type = "username" id="txtUsername" maxlength = "30" required></div>
-                </div>
-                
-                <div class = "field">
-                    <div>Password:</div>
-                    <div><input type = "password" id = "txtPassword" required></div>
-                </div>
-                
+        <script type="text/javascript" language = "javascript" src="js/jquery-2.0.3.min.js"></script>
+        <title>Cabana de Zenaida | Dashboard</title>
+    </head>
 
-                <div id = "bottomBar">
-                    <div id = "keep">
-                        <input type="checkbox" id="cbKeep">    
-                        keep me logged in
-                    </div>
-                    
-                    <div id = "loginButton" class = "theme" onclick="validate()">
-<!--                        <input type="submit" value="login" class="theme">-->
-                        Login
-                        <img id = "bottom" src="images/bottom_shadow.png">
-                    </div>
-                    
+    <body>
+        <div id = "dashboard">
+            <ul id = "navPane">
+                <li class="icon">0</li>
+                <li>To do</li>
+                <li>Comment Reviews</li>
+                <li>Statistics <span class="icon">j</span></li>
+                <li>Content Library</li>
+                <li>Chat</li>
+                <li>Edit website</li>
+            </ul>
+            <div id = "contentPane">
+                <div>
+                    All contents goes here
+                
                 </div>
-                
-                <img id = "bottom" src="images/bottom_shadow.png">
-                
-                <div id = "notifications"></div>
             </div>
-        </form>
+            
+        </div>
     </body>
     
-</HTML>
+</html>
